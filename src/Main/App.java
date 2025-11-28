@@ -1,11 +1,8 @@
-package Main;
-
-import Controller.LoginController;
-import View.LoginView;
+	package Main;
+import View.LoginForm;
 
 public class App {
-    public static void main(String[] args) {
-        LoginController controller = new LoginController();
-        new LoginView(controller).setVisible(true);
+    public static void main(String[] args){
+        new LoginForm().setVisible(true);;
     }
 }

@@ -1,0 +1,2 @@
+me@example.com,123456
+friend@test.com,abcdef

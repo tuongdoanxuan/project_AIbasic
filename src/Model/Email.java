@@ -1,28 +1,41 @@
 package Model;
 
 public class Email {
-	 private String from;
-	    private String to;
-	    private String subject;
-	    private String body;
-	    private boolean isSpam;
+	private String sender;
+	private String recipient;
+	private String subject;
+	private String content;
+	private boolean isSpam;
 
-	    public Email(String from, String to, String subject, String body, boolean isSpam) {
-	        this.from = from;
-	        this.to = to;
-	        this.subject = subject;
-	        this.body = body;
-	        this.isSpam = isSpam;
-	    }
+	public Email(String sender, String recipient, String subject, String content) {
+		this.sender = sender;
+		this.recipient = recipient;
+		this.subject = subject;
+		this.content = content;
+		this.isSpam = false;
+	}
 
-	    public String getFrom() { return from; }
-	    public String getTo() { return to; }
-	    public String getSubject() { return subject; }
-	    public String getBody() { return body; }
-	    public boolean isSpam() { return isSpam; }
+	public String getSender() {
+		return sender;
+	}
 
-	    @Override
-	    public String toString() {
-	        return subject + " (From: " + from + ")" + (isSpam ? " [SPAM]" : "");
-	    }
+	public String getRecipient() {
+		return recipient;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public boolean isSpam() {
+		return isSpam;
+	}
+
+	public void setSpam(boolean spam) {
+		this.isSpam = spam;
+	}
 }
